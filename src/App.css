@@ -50,3 +50,77 @@ h3{
 .form-container button{
   border: 2px solid #38B64A;
 }
+
+/*card*/
+.fruit-card{
+  width: 300px;
+  height: 550px;
+  border: 1px solid #bfbfbf;
+  margin-top: 60px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fruit-card img{
+  width: 200px;
+  height: auto;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+.fruit-card h4{
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.card-labels-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.card-btns-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.card-btns-container button{
+  background-color: #38B64A;
+  font-size: 14px;
+  font-weight: bold;
+  border: 2px solid #38B64A;
+}
+
+.card-price{
+  font-size: 26px;
+  font-weight: bold;
+  color: #38B64A;
+}
+
+/*fruits-display-container*/
+.fruits-display-container{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  column-gap: 60px;
+  row-gap: 60px;
+}
+
+/*footer*/
+footer{
+  background-color: #EF1C23;
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 60px;
+  font-weight: bold;
+}
