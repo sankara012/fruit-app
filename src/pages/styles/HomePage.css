@@ -1,4 +1,4 @@
-#root, .homepage-container{
+body, #root, .homepage-container{
   width:100%;
   height:100%;
   display:flex;
@@ -12,7 +12,7 @@
   width:150px;
   height:auto;
   margin-bottom: 0px;
-  margin-top:-100px;
+  
 }
 
 h3{
@@ -54,7 +54,7 @@ h3{
 /*card*/
 .fruit-card{
   width: 300px;
-  height: 550px;
+  height: 580px;
   border: 1px solid #bfbfbf;
   margin-top: 60px;
   padding: 20px;
@@ -64,10 +64,11 @@ h3{
 }
 
 .fruit-card img{
-  width: 200px;
-  height: auto;
+  width: 100%;
+  height: 40%;
   margin-bottom: 0px;
   margin-top: 10px;
+  object-fit: contain;
 }
 
 .fruit-card h4{
@@ -78,12 +79,18 @@ h3{
 
 .card-labels-container{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
-  width: 100%;
-  margin-bottom: 20px;
+ 
+
+}
+
+.card-labels-container ul{
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
 }
 
 .card-btns-container{

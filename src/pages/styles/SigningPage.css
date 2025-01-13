@@ -1,0 +1,56 @@
+.signing-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;  
+}
+
+.signing-page-container h3{
+ text-align: center;
+
+}
+
+/*form*/
+.signing-page-container form {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: 20px;
+}
+
+.signing-page-container form .input-type-1 {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid black;
+    border-radius: .25rem;
+}
+
+.signing-page-container form .input-type-2 {
+    margin-top: 20px;
+    background-color: #38B64A;
+    font-weight: bold;
+    color: white;
+    padding: 10px 0px;
+    border: 1px solid #38B64A;
+    border-radius: .25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signing-page-container form .input-type-2:hover {
+    background-color: #22742f;
+}
+
+.signing-page-container form p {
+    font-size: small;
+    text-align: center;
+}
+
+.signing-page-container form p a {
+    cursor: pointer;
+    color: #38B64A;
+}
+
+.signing-page-container form p a:hover {
+    color: #22742f;
+}

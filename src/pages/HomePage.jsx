@@ -1,17 +1,17 @@
 import React from "react";
 
-import Fruit from "./components/FruitCard.jsx";
+import Fruit from "../components/FruitCard.jsx";
 
-import LogoImage from "./assets/logo.png";
-import GrapesImage from "./assets/grapes.png";
-import BananaImage from "./assets/banana.png";
-import GuavaImage from "./assets/guava.png";
-import KiwiImage from "./assets/kiwi.png";
-import MangoImage from "./assets/mango.png";
-import OrangeImage from "./assets/orange.png";
+import LogoImage from "../assets/logo.png";
+import GrapesImage from "../assets/grapes.png";
+import BananaImage from "../assets/banana.png";
+import GuavaImage from "../assets/guava.png";
+import KiwiImage from "../assets/kiwi.png";
+import MangoImage from "../assets/mango.png";
+import OrangeImage from "../assets/orange.png";
 
 
-import "./App.css";
+import "./styles/HomePage.css";
 
 
 function HomePage(){
