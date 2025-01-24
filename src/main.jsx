@@ -1,11 +1,23 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { createBrowserRouter, RouterProvider, useParams, Navigate } from "react-router-dom"
 
 import './index.css'
 import HomePage from './pages/HomePage'
 import NotFoundPage from './pages/NotFoundPage'
 import SigningPage from './pages/SigningPage'
+
+
+const slugRegex=/^[a-z0-9-]+$/;
+
+function SigningPageWrapper(){
+  const {slug} = useParams();
+
+  if(!slugRegex.test(slug) || (slug !== "sign-in" && slug !== "sign-up")){
+    return <Navigate to = "/error" replace/>
+  }
+  return <SigningPage/>
+}
 
 const router=createBrowserRouter(
   [
@@ -15,8 +27,12 @@ const router=createBrowserRouter(
       errorElement: <NotFoundPage/>
     },
     {
-      path: "/sign",
-      element: <SigningPage/> 
+      path: "/:slug",
+      element: <SigningPageWrapper/> 
+    },
+    {
+      path: "/error",
+      element: <NotFoundPage/>
     }
   ]
 )
