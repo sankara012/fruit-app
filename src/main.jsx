@@ -6,7 +6,7 @@ import './index.css'
 import HomePage from './pages/HomePage'
 import NotFoundPage from './pages/NotFoundPage'
 import SigningPage from './pages/SigningPage'
-
+import CreateFruitPage from './pages/CreateFruitPage'
 
 const slugRegex=/^[a-z0-9-]+$/;
 
@@ -33,6 +33,10 @@ const router=createBrowserRouter(
     {
       path: "/error",
       element: <NotFoundPage/>
+    },
+    {
+      path: "/create",
+      element: <CreateFruitPage/>
     }
   ]
 )

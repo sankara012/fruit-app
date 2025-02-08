@@ -1,0 +1,58 @@
+.createfruitpage-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.createfruitpage-container h2 {
+    text-decoration: underline; 
+    color: #38B64A;
+}
+
+/*form*/
+.createfruitpage-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: self-end;
+}
+
+/*form-wrapper-1*/
+.form-wrapper-1{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.form-wrapper-1 .form-wrapper-1-inputfield{
+    width: 280px;
+    padding: 10px;
+}
+
+.form-wrapper-1-innerdiv{
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/*form-wrapper-2*/
+.form-wrapper-2 input{
+    padding: 10px 15px;
+    background-color: #38B64A;
+    border: 1px solid #38B64A;
+    transition: background-color 0.3s ease;
+}
+
+.form-wrapper-2 input:hover{
+    background-color: #22742f;
+}
+
+
+select{
+    margin-left: 10px;
+    padding: 10px 15px;
+}
