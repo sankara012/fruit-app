@@ -6,7 +6,7 @@ function Fruit(props){
     const vitamins = props.vitamin
 
     const vitaminList = vitamins.map((vitamin) => {
-         return <li key={vitamin}>{vitamin}</li>
+         return <li key={vitamin.id}>{vitamin.name}</li>
     })
 
 

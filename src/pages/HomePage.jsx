@@ -1,5 +1,6 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import ReactPaginate from "react-paginate";
+import axios from "axios";
 
 import Fruit from "../components/FruitCard.jsx";
 
@@ -15,17 +16,19 @@ import Fruits from "../Data.jsx";
 
 
 import "./styles/HomePage.css";
+import { use } from "react";
 
 
 function HomePage(){
 
+  const [fruits, setFruits] = useState([]);
   const [pageNumber, setPageNumber] = useState([]);
 
   const fruitsPerPage = 2;
   const pagesVisited = pageNumber * fruitsPerPage;
 
 
-  const fruitItems = Array.isArray(Fruits) && Fruits.length > 0 ? Fruits 
+  const fruitItems = Array.isArray(fruits) && fruits.length > 0 ? fruits 
     .slice(pagesVisited, pagesVisited + fruitsPerPage)
     .map((fruit) => {
       return (
@@ -34,13 +37,21 @@ function HomePage(){
           name={fruit.name} 
           image={fruit.image} 
           price={fruit.price}
-          vitamin={fruit.vitamin}
+          vitamin={fruit.vitamin_details}
         />
       )
   }):<div></div>
 
 
   const changePage = ({selected}) => {setPageNumber(selected)};
+
+  // axios get fruit data request => http://127.0.0.1:8000/api/v1/fruits/
+  useEffect(() => {
+    axios.get("http://127.0.0.1:8000/api/v1/fruits/")
+    .then((response) => {setFruits(response.data)})
+    .catch((error) => console.log("Error fecthing data: ", error));
+  
+  ;}, []);
 
 
   return(
