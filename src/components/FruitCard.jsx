@@ -3,18 +3,20 @@ import React from "react";
 
 function Fruit(props){
 
+    const vitamins = props.vitamin
+
+    const vitaminList = vitamins.map((vitamin) => {
+         return <li key={vitamin}>{vitamin}</li>
+    })
+
+
     return(
         <div className="fruit-card">
           <h4>{props.name}</h4>
           <img src={props.image} alt="" />
           <div className="card-labels-container">
             <ul>
-              <li>vitamin A</li>
-              <li>vitamin B6</li>
-              <li>vitamin C</li>
-              <li>vitamin K</li>
-              <li>vitamin E</li>
-              <li>polate</li>
+              {vitaminList}
             </ul>
             <div>
               <p className="card-price">{props.price} $</p>
