@@ -1,6 +1,9 @@
+import React from 'react'
+
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider, useParams, Navigate } from "react-router-dom"
+import { AuthProvider} from './AuthContext'
 
 import './index.css'
 import HomePage from './pages/HomePage'
@@ -11,6 +14,7 @@ import CreateFruitPage from './pages/CreateFruitPage'
 const slugRegex=/^[a-z0-9-]+$/;
 
 function SigningPageWrapper(){
+
   const {slug} = useParams();
 
   if(!slugRegex.test(slug) || (slug !== "sign-in" && slug !== "sign-up")){
@@ -43,6 +47,8 @@ const router=createBrowserRouter(
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+  <AuthProvider>
     <RouterProvider router={router} />
+  </AuthProvider>
   </StrictMode>,
 )

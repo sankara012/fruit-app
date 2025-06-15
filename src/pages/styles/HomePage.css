@@ -7,6 +7,12 @@ body, #root, .homepage-container{
   align-items: center;
 }
 
+.Log-status-icon{
+  width:60px;
+  height:60px;
+  padding-top:50px;
+}
+
 /*logo*/
 .logo{
   width:150px;
@@ -49,6 +55,14 @@ h3{
 
 .form-container button{
   border: 2px solid #38B64A;
+}
+
+.button {
+  padding: 6px;
+  border: 2px solid #38B64A;
+  border-radius: .5rem;
+  background-color: #38B64A;
+  color: white;
 }
 
 /*card*/
@@ -179,3 +193,4 @@ footer{
   margin-top: 60px;
   font-weight: bold;
 }
+
